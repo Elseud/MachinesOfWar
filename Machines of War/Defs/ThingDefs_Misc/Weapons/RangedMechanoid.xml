@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Particle Launcher -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>MOW_Bullet_ParticleLauncher</defName>
+    <label>particle launcher shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_ParticleLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>3</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>60</speed>
+      <explosionRadius>2.9</explosionRadius >
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Abstract="True" ParentName="BaseGunWithQuality" Name="MOW_Gun_ParticleLauncherBase">
+    <label>particle launcher</label>
+    <description>An explosive mini-artillery device. Fires a warhead containing unstable particles that detonate upon impact.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ParticleLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1800</MarketValue>
+      <Mass>18</Mass>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <generateCommonality>0.5</generateCommonality>
+    <tradeability>None</tradeability>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <relicChance>0</relicChance>
+  </ThingDef>
+
+  <ThingDef ParentName="MOW_Gun_ParticleLauncherBase">
+    <defName>MOW_Gun_ParticleLauncher</defName>
+    <destroyOnDrop>true</destroyOnDrop>
+    <weaponTags>
+      <li>MOW_MechanoidGunExplosive</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MOW_Bullet_ParticleLauncher</defaultProjectile>
+        <forcedMissRadius>3.5</forcedMissRadius>
+        <ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
+        <warmupTime>1.75</warmupTime>
+        <range>29.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- Storm Charge Scatter -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>MOW_Bullet_StormChargeScatter</defName>
+    <label>charge scatter blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_StormChargeScatter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>MOW_Breach_Ranged</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+	  <armorPenetrationBase>0.45</armorPenetrationBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>60</speed>
+	</projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>MOW_Gun_StormChargeScatter</defName>
+    <label>storm charge scatter</label>
+    <description>A short-range weapon used by mechanoids. Equipped with axe head bayonet, it can serve in equal measure as a melee weapon, breaching tool and devastating chain shotgun.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/StormChargeScatter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <statBases>
+      <MarketValue>1600</MarketValue>
+	  <Mass>4.6</Mass>
+      <AccuracyTouch>0.57</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>MOW_MechanoidGunBreach</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MOW_Bullet_StormChargeScatter</defaultProjectile>
+		<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <warmupTime>1.2</warmupTime>
+        <range>11.9</range>
+		<burstShotCount>3</burstShotCount>
+		<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>MOW_Shot_StormChargeScatter</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>axe bayonet</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.5</cooldownTime>
+		<armorPenetration>0.4</armorPenetration>
+      </li>
+	  <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- Shockwave Cannon -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>MOW_Bullet_ShockaveCannon</defName>
+    <label>shockwave blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_ShockaveCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>MOW_Shockwave</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+	  <armorPenetrationBase>0.11</armorPenetrationBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>120</speed>
+	  <extraDamages>
+	    <li>
+          <def>Stun</def>
+          <amount>4</amount>
+		  <chance>0.5</chance>
+        </li>
+	  </extraDamages>
+	</projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>MOW_Gun_ShockaveCannon</defName>
+    <label>shockwave cannon</label>
+    <description>A sonic cannon used primarily for non-lethal suppression. The sheer impact force of the cannon's shockwave frequently leaves its target dazed for a short while.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ShockaveCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+	  <Mass>4.6</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>MOW_MechanoidGunSonic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MOW_Bullet_ShockaveCannon</defaultProjectile>
+		<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <warmupTime>1</warmupTime>
+        <range>25.9</range>
+		<burstShotCount>1</burstShotCount>
+        <soundCast>MOW_Shot_ShockwaveCannon</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+	  <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+</Defs>

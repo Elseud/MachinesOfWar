@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>MOW_Mech_Enforcer</defName>
+    <label>enforcer</label>
+    <description>Tough, human-sized combat mechanoids built for short range to melee combat. Designed predominantly for urban warfare, they are well equipped for breaching structures and slaughtering evryone inside. This narrow specialization has its drawbacks however - their mediocre speed and short range weaponry making enforcers ill-suited for open field deployment.</description>
+    <statBases>
+		<MoveSpeed>3.80</MoveSpeed>
+		<ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+		<PsychicSensitivity>0</PsychicSensitivity>
+	</statBases>
+	<tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <baseBodySize>1.1</baseBodySize>
+	  <body>MOW_Enforcer</body>
+      <baseHealthScale>1.52</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+	<butcherProducts>
+		<Steel>15</Steel>
+		<Plasteel>15</Plasteel>
+		<ComponentIndustrial>4</ComponentIndustrial>
+	</butcherProducts>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>MOW_Mech_Enforcer</defName>
+    <label>enforcer</label>
+    <race>MOW_Mech_Enforcer</race>
+    <combatPower>200</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Enforcer/Enforcer</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.7</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+	<isGoodBreacher>false</isGoodBreacher>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>MOW_MechanoidGunBreach</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+  <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>MOW_Mech_Cicada</defName>
+    <label>cicada</label>
+    <description>A medium-sized, multi-legged combat mechanoid. Cicadas are purpose built for crowd control, utilising an array of sonic weaponry to do so. While not overly lethal on their own, they are nevertheless very dangerous when backing up other mechanoid forces - disrupting enemy formations and slowing down their advance with their terrible white noise shriek.</description>
+    <statBases>
+      <MoveSpeed>2.6</MoveSpeed>
+      <ArmorRating_Blunt>0.21</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <PsychicSensitivity>0</PsychicSensitivity>
+    </statBases>
+    <tools>
+      <li>
+        <label>front left leg</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>front right leg</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>MOW_MechanicalCicada</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>1.66</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+          <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+	<butcherProducts>
+		<Steel>10</Steel>
+		<Plasteel>10</Plasteel>
+		<ComponentIndustrial>3</ComponentIndustrial>
+	</butcherProducts>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>MOW_Mech_Cicada</defName>
+    <label>cicada</label>
+    <race>MOW_Mech_Cicada</race>
+    <combatPower>90</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Cicada/Cicada</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.7, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+	<techHediffsChance>1</techHediffsChance>
+	<techHediffsMoney>9999~9999</techHediffsMoney>
+	<techHediffsTags>
+	  <li>MOW_Mech</li>
+	</techHediffsTags>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>MOW_MechanoidGunSonic</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+  <ThingDef ParentName="BaseMechanoid">
+		<defName>MOW_Mech_Demolisher</defName>
+		<label>demolisher</label>
+		<description>Towering, roughly human-shaped combat mechanoids clad in heavy armour. they specialise as bunker busters - capable of laying waste to even the most fortified defense positions, along with any unfortunate soul manning them. the devastating weaponry, along with thick armour plating make demolishers a nightmare to deal with for any defender. their only disatdvantage is their relative slowness - making them vulnurable to hit and run attacks utilising long range anti-materiel weaponry, or heavy ordinance strikes.</description>
+		<statBases>
+			<MoveSpeed>2.1</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>16.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>16.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<body>MOW_Demolisher</body>
+			<baseBodySize>2.6</baseBodySize>
+			<baseHealthScale>4.80</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+					<soundCall>Pawn_Mech_Centipede_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>20</Steel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</butcherProducts>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>MOW_Mech_Demolisher</defName>
+		<label>demolisher</label>
+		<race>MOW_Mech_Demolisher</race>
+		<combatPower>410</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Demolisher/Demolisher</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.9</drawSize>
+					<shadowData>
+						<volume>(0.7, 0.8, 0.7)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>MOW_MechanoidGunExplosive</li>
+		</weaponTags>
+	</PawnKindDef>
+  
+</Defs>

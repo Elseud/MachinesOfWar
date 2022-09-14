@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef>
+    <defName>MOW_Shockwave</defName>
+    <label>shockwave</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>false</isExplosive>
+    <deathMessage>{0} has been shockwaved to death.</deathMessage>
+    <hediff>Crush</hediff>	
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+  </DamageDef>
+
+  <DamageDef>
+    <defName>MOW_Breach_Ranged</defName>
+    <label>breach</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>false</isExplosive>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <hediff>Gunshot</hediff>	
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>6</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>8</buildingDamageFactorPassable>
+  </DamageDef>
+  
+</Defs>
