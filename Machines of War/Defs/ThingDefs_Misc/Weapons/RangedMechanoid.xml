@@ -8,7 +8,7 @@
     <graphicData>
       <texPath>Things/Projectile/Projectile_ParticleLauncher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>3</drawSize>
+	  <drawSize>2</drawSize>
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
@@ -25,6 +25,9 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ParticleLauncher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize MayRequire="CarnySenpai.EnableOversizedWeapons">1.5</drawSize>
+	  <drawOffsetSouth MayRequire="CarnySenpai.EnableOversizedWeapons">(-0.4, 0.0, -0.4)</drawOffsetSouth>
+	  <drawOffsetWest MayRequire="CarnySenpai.EnableOversizedWeapons">(-0.3, 0.0, -0.3)</drawOffsetWest>
     </graphicData>
     <statBases>
       <MarketValue>1800</MarketValue>
@@ -81,7 +84,6 @@
       <texPath>Things/Projectile/Bullet_StormChargeScatter</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <drawSize>1.2</drawSize>
     </graphicData>
     <projectile>
       <damageDef>MOW_Breach_Ranged</damageDef>
@@ -100,6 +102,7 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/StormChargeScatter</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize MayRequire="CarnySenpai.EnableOversizedWeapons">1.2</drawSize>
     </graphicData>
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
@@ -188,6 +191,7 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ShockaveCannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize MayRequire="CarnySenpai.EnableOversizedWeapons">1.1</drawSize>
     </graphicData>
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
