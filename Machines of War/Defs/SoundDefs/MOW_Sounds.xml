@@ -4,13 +4,12 @@
   <SoundDef>
     <defName>MOW_Shot_StormChargeScatter</defName>  
     <context>MapOnly</context>  
-    <eventNames />
 	<maxSimultaneous>1</maxSimultaneous> 	
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Things/MOW_Shot_StormChargeScatter</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/MOW_Shot_StormChargeScatter</clipPath>
           </li>
         </grains>		
         <volumeRange>45~55</volumeRange>
@@ -23,13 +22,12 @@
   <SoundDef>
     <defName>MOW_Shot_ShockwaveCannon</defName>  
     <context>MapOnly</context>  
-    <eventNames />
 	<maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Things/MOW_Shot_ShockwaveCannon</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/MOW_Shot_ShockwaveCannon</clipPath>
           </li>
         </grains>      
         <volumeRange>20~25</volumeRange>
@@ -41,13 +39,12 @@
   <SoundDef>
     <defName>MOW_Shot_EMMarksmanRifle</defName>  
     <context>MapOnly</context>  
-    <eventNames />
 	<maxSimultaneous>1</maxSimultaneous>  
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Things/MOW_Shot_EMMarksmanRifle</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/MOW_Shot_EMMarksmanRifle</clipPath>
           </li>
         </grains>      
         <volumeRange>25~25</volumeRange>

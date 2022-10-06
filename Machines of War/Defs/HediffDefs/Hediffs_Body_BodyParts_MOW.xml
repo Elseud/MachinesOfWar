@@ -72,7 +72,7 @@
     </stages>
   </HediffDef>
   
-  <ThingDef ParentName="BodyPartProstheticBase">
+  <ThingDef ParentName="BodyPartArchotechBase">
     <defName>MOW_SonicAmplifier</defName>
     <label>sonic amplifier</label>
     <description>A wide-spectrum sound amplifier used by the Cicada to emit its terrible white noise shriek.</description>

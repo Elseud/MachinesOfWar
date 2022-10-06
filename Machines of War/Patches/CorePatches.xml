@@ -44,7 +44,9 @@
 		  <Mech_Scyther>10</Mech_Scyther>
 		  <MOW_Mech_Cicada>20</MOW_Mech_Cicada>
           <MOW_Mech_Enforcer>35</MOW_Mech_Enforcer>
-          <Mech_Centipede>70</Mech_Centipede>
+          <Mech_CentipedeBlaster>30</Mech_CentipedeBlaster>
+		  <Mech_CentipedeGunner>30</Mech_CentipedeGunner>
+		  <Mech_CentipedeBurner>30</Mech_CentipedeBurner>
           <MOW_Mech_Demolisher>70</MOW_Mech_Demolisher>
         </options>
       </li>
@@ -53,7 +55,9 @@
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-          <Mech_Centipede>10</Mech_Centipede>
+          <Mech_CentipedeBlaster>3</Mech_CentipedeBlaster>
+		  <Mech_CentipedeGunner>3</Mech_CentipedeGunner>
+		  <Mech_CentipedeBurner>3</Mech_CentipedeBurner>
           <MOW_Mech_Demolisher>10</MOW_Mech_Demolisher>
         </options>
       </li>
@@ -85,7 +89,6 @@
           <MOW_Mech_Demolisher>10</MOW_Mech_Demolisher>
           <MOW_Mech_Cicada>10</MOW_Mech_Cicada>
           <MOW_Mech_Enforcer>10</MOW_Mech_Enforcer>
-		  <Mech_Lancer>10</Mech_Lancer>
         </options>
       </li>	  
     </value>
