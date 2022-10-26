@@ -13,6 +13,7 @@
     <impactSoundType>Blunt</impactSoundType>
     <armorCategory>Blunt</armorCategory>
     <defaultArmorPenetration>0</defaultArmorPenetration>
+	<isRanged>true</isRanged>
   </DamageDef>
 
   <DamageDef>
@@ -22,13 +23,13 @@
     <externalViolence>true</externalViolence>
     <isExplosive>false</isExplosive>
     <deathMessage>{0} has been shot to death.</deathMessage>
-    <hediff>Gunshot</hediff>	
-    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <hediff>Gunshot</hediff>
     <impactSoundType>Bullet</impactSoundType>
     <armorCategory>Sharp</armorCategory>
     <defaultArmorPenetration>0</defaultArmorPenetration>
     <buildingDamageFactorImpassable>6</buildingDamageFactorImpassable>
     <buildingDamageFactorPassable>8</buildingDamageFactorPassable>
+	<isRanged>true</isRanged>
   </DamageDef>
   
 </Defs>

@@ -65,9 +65,23 @@
     <race>MOW_Mech_Enforcer</race>
     <combatPower>200</combatPower>
     <lifeStages>
-      <li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/EnforcerClean/EnforcerClean</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Enforcer</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.7</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+	  <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Enforcer/Enforcer</texPath>
+		  <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Enforcer</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.7</drawSize>
           <shadowData>
@@ -77,6 +91,8 @@
       </li>
     </lifeStages>
 	<isGoodBreacher>false</isGoodBreacher>
+	<techHediffsChance MayRequire="Ludeon.RimWorld.Biotech">1</techHediffsChance>
+	<techHediffsMoney>9999~9999</techHediffsMoney>
     <weaponMoney>9999~9999</weaponMoney>
     <weaponTags>
       <li>MOW_MechanoidGunBreach</li>
@@ -141,6 +157,13 @@
           <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
           <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
         </li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+          <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+        </li>
       </lifeStageAges>
     </race>
 	<butcherProducts>
@@ -156,10 +179,24 @@
     <race>MOW_Mech_Cicada</race>
     <combatPower>90</combatPower>
     <lifeStages>
-      <li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/CicadaClean/CicadaClean</texPath>
+		  <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Cicada</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.7, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+	  <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Cicada/Cicada</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Cicada</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+		  <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2.7</drawSize>
           <shadowData>
             <volume>(0.6, 0.7, 0.6)</volume>
@@ -235,6 +272,13 @@
 					<soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
 					<soundCall>Pawn_Mech_Centipede_Call</soundCall>
 				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>MechanoidFullyFormed</def>
+					<minAge>100</minAge>
+					<soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+					<soundCall>Pawn_Mech_Centipede_Call</soundCall>
+				</li>
 			</lifeStageAges>
 			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
 			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
@@ -253,9 +297,23 @@
 		<race>MOW_Mech_Demolisher</race>
 		<combatPower>410</combatPower>
 		<lifeStages>
+			<li MayRequire="Ludeon.RimWorld.Biotech">
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/DemolisherClean/DemolisherClean</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Demolisher</maskPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.9</drawSize>
+					<shadowData>
+						<volume>(0.7, 0.8, 0.7)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
 			<li>
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Mechanoid/Demolisher/Demolisher</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Demolisher</maskPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.9</drawSize>
 					<shadowData>
@@ -268,6 +326,8 @@
 		<weaponTags>
 			<li>MOW_MechanoidGunExplosive</li>
 		</weaponTags>
+		<techHediffsChance MayRequire="Ludeon.RimWorld.Biotech">1</techHediffsChance>
+	    <techHediffsMoney>9999~9999</techHediffsMoney>
 	</PawnKindDef>
   
 </Defs>

@@ -13,6 +13,7 @@
     <impactSoundType>Blunt</impactSoundType>
     <armorCategory>Blunt</armorCategory>
     <defaultArmorPenetration>0</defaultArmorPenetration>
+	<isRanged>true</isRanged>
   </DamageDef>
 
   <DamageDef>
@@ -29,6 +30,7 @@
     <defaultArmorPenetration>0</defaultArmorPenetration>
     <buildingDamageFactorImpassable>6</buildingDamageFactorImpassable>
     <buildingDamageFactorPassable>8</buildingDamageFactorPassable>
+	<isRanged>true</isRanged>
   </DamageDef>
   
 </Defs>
