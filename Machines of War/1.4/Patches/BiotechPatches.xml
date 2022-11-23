@@ -156,6 +156,51 @@
             <techHediffsChance>1</techHediffsChance>
 					</value>
 				</li>
+
+        <!-- Cicada's AI -->
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThinkTreeDef[defName = "MechConstant"]/thinkRoot/subNodes</xpath>
+          <value>
+
+            <li Class="ThinkNode_ConditionalPlayerMech">
+              <invert>true</invert>
+              <subNodes>
+    
+                <li Class="ThinkNode_ConditionalHasAbility">
+                  <ability>MOW_CicadaShriek</ability>
+                  <subNodes>
+    
+                    <li Class="ThinkNodeConditional_UnderCombatPressure">
+                      <maxThreatDistance>15</maxThreatDistance>
+                      <minCloseTargets>1</minCloseTargets>
+                        <subNodes>
+                          <li Class="ThinkNodeConditional_HashIntervalTick">
+                            <interval>50</interval>
+                            <subNodes>
+                              <li Class="EL_MechAI.JobGiver_AICastAbilityOnMechEnemies">
+                                <ability>MOW_CicadaShriek</ability>
+                              </li>
+                            </subNodes>
+                        </li>
+                      </subNodes>
+                    </li>
+    
+                  </subNodes>
+                </li>
+    
+              </subNodes>
+            </li>
+
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Cicada"]/race/thinkTreeConstant</xpath>
+					<value>
+            <thinkTreeConstant>MechConstant</thinkTreeConstant>
+					</value>
+				</li>
 				
         <!-- Gestation and resurrection -->
 
@@ -183,122 +228,8 @@
             </value>
         </li>
         
-        <!-- Cicada's AI -->
-
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThinkTreeDef[defName = "CicadaConstant"]/thinkRoot/subNodes</xpath>
-          <value>
-            
-            <li Class="ThinkNode_ConditionalPlayerMech">
-              <subNodes>
-                
-                <li Class="ThinkNode_ConditionalHasAbility">
-                  <ability>LongjumpMechLauncher</ability>
-                  <subNodes>
-                    
-                    <!-- Jump towards fire to beat -->
-                    <li Class="ThinkNode_ConditionalDoingJob">
-                      <jobDef>BeatFire</jobDef>
-                      <subNodes>
-                        <li Class="JobGiver_AIJumpToJobTarget">
-                          <ability>LongjumpMechLauncher</ability>
-                        </li>
-                      </subNodes>
-                    </li>
-      
-                    <!-- Jump to rescue pawn -->
-                    <li Class="ThinkNode_ConditionalDoingJob">
-                      <jobDef>Rescue</jobDef>
-                      <subNodes>
-                        <!-- Downed pawn -->
-                        <li Class="JobGiver_AIJumpToJobRescueTarget">
-                          <ability>LongjumpMechLauncher</ability>
-                        </li>
-                        <!-- Jump to bed -->
-                        <li Class="JobGiver_AIJumpToJobRescueTarget">
-                          <ability>LongjumpMechLauncher</ability>
-                          <targetIndex>B</targetIndex>
-                        </li>
-                      </subNodes>
-                    </li>
-      
-                  </subNodes>
-                </li>
-      
-              </subNodes>
-            </li>
-            
-            <li Class="ThinkNode_ConditionalPlayerMech">
-              <invert>true</invert>
-              <subNodes>
-                <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
-                  <subNodes>
-                    <!-- Smokepop -->
-                    <li Class="ThinkNode_ConditionalHasAbility">
-                      <ability>SmokepopMech</ability>
-                      <subNodes>
-                        <li Class="ThinkNode_ConditionalShotRecently">
-                          <thresholdTicks>600</thresholdTicks>
-                          <subNodes>
-                            <li Class="ThinkNode_ConditionalTotalDamage">
-                              <thresholdPercent>0.25</thresholdPercent>
-                              <subNodes>
-                                <li Class="JobGiver_AICastAbilityOnSelf">
-                                  <ability>SmokepopMech</ability>
-                                </li>
-                              </subNodes>
-                            </li>
-                          </subNodes>
-                        </li>
-                      </subNodes>
-                    </li>
-                    
-                    <!-- Resurrect -->
-                    <li Class="ThinkNode_ConditionalHasAbility">
-                      <ability>ResurrectionMech</ability>
-                      <subNodes>
-                        <li Class="JobGiver_AIResurrectTarget">
-                          <ability>ResurrectionMech</ability>
-                        </li>
-                        <li Class="ThinkNode_ConditionalHasAbility">
-                          <ability>LongjumpMech</ability>
-                            <subNodes>
-                              <li Class="ThinkNode_ConditionalAbilityCastLastTick">
-                                <ability>ResurrectionMech</ability>
-                                <maxTicksAgo>120</maxTicksAgo>
-                                <subNodes>
-                                  <li Class="ThinkNode_HarmedRecently">
-                                    <thresholdTicks>120</thresholdTicks>
-                                    <subNodes>
-                                      <li Class="JobGiver_AIJumpEscapeEnemies">
-                                        <ability>LongjumpMech</ability>
-                                      </li>
-                                    </subNodes>
-                                  </li>
-                                </subNodes>
-                              </li>
-                            </subNodes>
-                        </li>
-                      </subNodes>
-                    </li>                
-      
-                    <!-- Spawn mecs -->
-                    <li Class="ThinkNode_ConditionalHasTarget">
-                      <subNodes>
-                        <li Class="JobGiver_AIReleaseMechs" />
-                      </subNodes>
-                    </li>
-                  
-                  </subNodes>
-                </li>
-              </subNodes>
-            </li>
-          </value>
-        </li>
-        
-        <li Class="PatchOperationAdd">
-
-        <xpath>Defs</xpath>
+          <xpath>Defs</xpath>
           <value>
             <RecipeDef ParentName="MediumMechanoidRecipe">
               <defName>Enforcer</defName>
