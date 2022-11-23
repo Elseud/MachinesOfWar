@@ -281,11 +281,11 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
 		<weaponMoney>9999~9999</weaponMoney>
 		<weaponTags>
 			<li>MOW_MechanoidGunExplosive</li>
 		</weaponTags>
-	  <techHediffsMoney>9999~9999</techHediffsMoney>
 	</PawnKindDef>
   
 </Defs>

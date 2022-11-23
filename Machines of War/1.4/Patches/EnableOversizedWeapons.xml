@@ -8,17 +8,10 @@
 			<success>Normal</success>
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "MOW_Gun_ParticleLauncher"]</xpath>
+					<xpath>Defs/ThingDef[defName = "MOW_Gun_ParticleLauncher"]/graphicData</xpath>
 					<value>
                         <drawOffsetSouth>(-0.4, 0.0, -0.4)</drawOffsetSouth>
                         <drawOffsetWest>(-0.3, 0.0, -0.3)</drawOffsetWest>
-					</value>
-				</li>
-
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "MOW_Gun_ShockaveCannon"]</xpath>
-					<value>
-                        <drawSize>1.1</drawSize>
 					</value>
 				</li>
 			</operations>
