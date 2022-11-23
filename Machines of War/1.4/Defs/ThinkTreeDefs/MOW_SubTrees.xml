@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThinkTreeDef>
+    <defName>CicadaConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+
+        <!-- Despawned -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+
+        <li Class="ThinkNode_ConditionalPlayerMech">
+          <invert>true</invert>
+          <subNodes>
+
+            <li Class="ThinkNode_ConditionalHasAbility">
+              <ability>MOW_CicadaShriek</ability>
+              <subNodes>
+
+                <li Class="ThinkNodeConditional_UnderCombatPressure">
+                  <maxThreatDistance>15</maxThreatDistance>
+                  <minCloseTargets>1</minCloseTargets>
+                    <subNodes>
+                      <li Class="ThinkNodeConditional_HashIntervalTick">
+                        <interval>50</interval>
+                        <subNodes>
+                          <li Class="EL_MechAI.JobGiver_AICastAbilityOnMechEnemies">
+                            <ability>MOW_CicadaShriek</ability>
+                          </li>
+                        </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+
+              </subNodes>
+            </li>
+
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

@@ -1,25 +1,451 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-    <Operation MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
-    <xpath>Defs/RecipeDef[defName = "ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
-      <value>
-            <li>Corpse_MOW_Mech_Enforcer</li>
-            <li>Corpse_MOW_Mech_Cicada</li>
-      </value>
-    </Operation>
-    <Operation MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
-    <xpath>Defs/RecipeDef[defName = "ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
-      <value>
-            <li>Corpse_MOW_Mech_Demolisher</li>
-      </value>
-  </Operation>
-  <Operation MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName = "LargeMechGestator"]/recipes</xpath>
-      <value>
-          <li>Enforcer</li>
-          <li>Cicada</li>
-          <li>Demolisher</li>
-      </value>
+  <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+
+    <match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+
+        <!-- Enforcer -->
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Enforcer"]/statBases</xpath>
+					<value>
+            <BandwidthCost>2</BandwidthCost>
+            <MechEnergyLossPerHP>0.2</MechEnergyLossPerHP>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Enforcer"]/lifeStages</xpath>
+          <order>Prepend</order>
+					<value>
+            <li>
+              <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/EnforcerClean/EnforcerClean</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Enforcer</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.7</drawSize>
+                <shadowData>
+                  <volume>(0.4, 0.8, 0.4)</volume>
+                </shadowData>
+              </bodyGraphicData>
+            </li>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Enforcer"]/race/lifeStageAges</xpath>
+					<value>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+              <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+              <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+            </li>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Enforcer"]</xpath>
+					<value>
+            <techHediffsChance>1</techHediffsChance>
+					</value>
+				</li>
+        
+        <!-- Cicada -->
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Cicada"]/statBases</xpath>
+					<value>
+            <BandwidthCost>3</BandwidthCost>
+            <MechEnergyLossPerHP>0.2</MechEnergyLossPerHP>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Cicada"]/race/lifeStageAges</xpath>
+					<value>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+              <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+              <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+            </li>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Cicada"]/lifeStages</xpath>
+          <order>Prepend</order>
+					<value>
+            <li>
+              <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/CicadaClean/CicadaClean</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Cicada</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>2.7</drawSize>
+                <shadowData>
+                  <volume>(0.6, 0.7, 0.6)</volume>
+                </shadowData>
+              </bodyGraphicData>
+            </li>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Cicada"]</xpath>
+					<value>
+            <techHediffsChance>1</techHediffsChance>
+					</value>
+				</li>
+        
+        <!-- Demolisher -->
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Demolisher"]/statBases</xpath>
+					<value>
+            <BandwidthCost>5</BandwidthCost>
+            <MechEnergyLossPerHP>0.15</MechEnergyLossPerHP>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Demolisher"]/race/lifeStageAges</xpath>
+					<value>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+              <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+              <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+            </li>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Demolisher"]/lifeStages</xpath>
+          <order>Prepend</order>
+					<value>
+            <li>
+              <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/DemolisherClean/DemolisherClean</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Demolisher</maskPath>
+                          <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>3.9</drawSize>
+                <shadowData>
+                  <volume>(0.7, 0.8, 0.7)</volume>
+                </shadowData>
+              </bodyGraphicData>
+            </li>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Demolisher"]</xpath>
+					<value>
+            <techHediffsChance>1</techHediffsChance>
+					</value>
+				</li>
+				
+        <!-- Gestation and resurrection -->
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/RecipeDef[defName = "ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+                  <li>Corpse_MOW_Mech_Enforcer</li>
+                  <li>Corpse_MOW_Mech_Cicada</li>
+            </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/RecipeDef[defName = "ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+                  <li>Corpse_MOW_Mech_Demolisher</li>
+            </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName = "LargeMechGestator"]/recipes</xpath>
+            <value>
+                <li>Enforcer</li>
+                <li>Cicada</li>
+                <li>Demolisher</li>
+            </value>
+        </li>
+        
+        <!-- Cicada's AI -->
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThinkTreeDef[defName = "CicadaConstant"]/thinkRoot/subNodes</xpath>
+          <value>
+            
+            <li Class="ThinkNode_ConditionalPlayerMech">
+              <subNodes>
+                
+                <li Class="ThinkNode_ConditionalHasAbility">
+                  <ability>LongjumpMechLauncher</ability>
+                  <subNodes>
+                    
+                    <!-- Jump towards fire to beat -->
+                    <li Class="ThinkNode_ConditionalDoingJob">
+                      <jobDef>BeatFire</jobDef>
+                      <subNodes>
+                        <li Class="JobGiver_AIJumpToJobTarget">
+                          <ability>LongjumpMechLauncher</ability>
+                        </li>
+                      </subNodes>
+                    </li>
+      
+                    <!-- Jump to rescue pawn -->
+                    <li Class="ThinkNode_ConditionalDoingJob">
+                      <jobDef>Rescue</jobDef>
+                      <subNodes>
+                        <!-- Downed pawn -->
+                        <li Class="JobGiver_AIJumpToJobRescueTarget">
+                          <ability>LongjumpMechLauncher</ability>
+                        </li>
+                        <!-- Jump to bed -->
+                        <li Class="JobGiver_AIJumpToJobRescueTarget">
+                          <ability>LongjumpMechLauncher</ability>
+                          <targetIndex>B</targetIndex>
+                        </li>
+                      </subNodes>
+                    </li>
+      
+                  </subNodes>
+                </li>
+      
+              </subNodes>
+            </li>
+            
+            <li Class="ThinkNode_ConditionalPlayerMech">
+              <invert>true</invert>
+              <subNodes>
+                <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+                  <subNodes>
+                    <!-- Smokepop -->
+                    <li Class="ThinkNode_ConditionalHasAbility">
+                      <ability>SmokepopMech</ability>
+                      <subNodes>
+                        <li Class="ThinkNode_ConditionalShotRecently">
+                          <thresholdTicks>600</thresholdTicks>
+                          <subNodes>
+                            <li Class="ThinkNode_ConditionalTotalDamage">
+                              <thresholdPercent>0.25</thresholdPercent>
+                              <subNodes>
+                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                  <ability>SmokepopMech</ability>
+                                </li>
+                              </subNodes>
+                            </li>
+                          </subNodes>
+                        </li>
+                      </subNodes>
+                    </li>
+                    
+                    <!-- Resurrect -->
+                    <li Class="ThinkNode_ConditionalHasAbility">
+                      <ability>ResurrectionMech</ability>
+                      <subNodes>
+                        <li Class="JobGiver_AIResurrectTarget">
+                          <ability>ResurrectionMech</ability>
+                        </li>
+                        <li Class="ThinkNode_ConditionalHasAbility">
+                          <ability>LongjumpMech</ability>
+                            <subNodes>
+                              <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                <ability>ResurrectionMech</ability>
+                                <maxTicksAgo>120</maxTicksAgo>
+                                <subNodes>
+                                  <li Class="ThinkNode_HarmedRecently">
+                                    <thresholdTicks>120</thresholdTicks>
+                                    <subNodes>
+                                      <li Class="JobGiver_AIJumpEscapeEnemies">
+                                        <ability>LongjumpMech</ability>
+                                      </li>
+                                    </subNodes>
+                                  </li>
+                                </subNodes>
+                              </li>
+                            </subNodes>
+                        </li>
+                      </subNodes>
+                    </li>                
+      
+                    <!-- Spawn mecs -->
+                    <li Class="ThinkNode_ConditionalHasTarget">
+                      <subNodes>
+                        <li Class="JobGiver_AIReleaseMechs" />
+                      </subNodes>
+                    </li>
+                  
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+          </value>
+        </li>
+        
+        <li Class="PatchOperationAdd">
+
+        <xpath>Defs</xpath>
+          <value>
+            <RecipeDef ParentName="MediumMechanoidRecipe">
+              <defName>Enforcer</defName>
+              <label>gestate enforcer</label>
+              <description>Gestate an enforcer mechanoid.</description>
+            <gestationCycles>3</gestationCycles>
+            <researchPrerequisite>HighMechtech</researchPrerequisite>
+              <ingredients Inherit="False">
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>150</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Plasteel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>150</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>ComponentIndustrial</li>
+                    </thingDefs>
+                  </filter>
+                  <count>6</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SubcoreRegular</li>
+                    </thingDefs>
+                  </filter>
+                  <count>1</count>
+                </li>
+              </ingredients>
+              <products>
+                <MOW_Mech_Enforcer>1</MOW_Mech_Enforcer>
+              </products>
+              <descriptionHyperlinks>
+                <ThingDef>MOW_Mech_Enforcer</ThingDef>
+              </descriptionHyperlinks>
+            </RecipeDef>
+            
+            <RecipeDef ParentName="MediumMechanoidRecipe">
+              <defName>Cicada</defName>
+              <label>gestate cicada</label>
+              <description>Gestate a cicada mechanoid.</description>
+            <gestationCycles>3</gestationCycles>
+            <researchPrerequisite>HighMechtech</researchPrerequisite>
+              <ingredients Inherit="False">
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>150</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Plasteel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>150</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>ComponentIndustrial</li>
+                    </thingDefs>
+                  </filter>
+                  <count>6</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SubcoreRegular</li>
+                    </thingDefs>
+                  </filter>
+                  <count>1</count>
+                </li>
+              </ingredients>
+              <products>
+                <MOW_Mech_Cicada>1</MOW_Mech_Cicada>
+              </products>
+              <descriptionHyperlinks>
+                <ThingDef>MOW_Mech_Cicada</ThingDef>
+              </descriptionHyperlinks>
+            </RecipeDef>
+          
+            <RecipeDef ParentName="HeavyMechanoidRecipe">
+              <defName>Demolisher</defName>
+              <label>gestate demolisher</label>
+              <description>Gestate a demolisher mech.</description>
+              <gestationCycles>6</gestationCycles>
+              <researchPrerequisite>HighMechtech</researchPrerequisite>
+              <ingredients Inherit="False">
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>250</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Plasteel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>250</count>
+                </li>
+              <li>
+                  <filter>
+                    <thingDefs>
+                      <li>ComponentIndustrial</li>
+                    </thingDefs>
+                  </filter>
+                  <count>8</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SubcoreHigh</li>
+                    </thingDefs>
+                  </filter>
+                  <count>1</count>
+                </li>
+              </ingredients>
+              <products>
+                <MOW_Mech_Demolisher>1</MOW_Mech_Demolisher>
+              </products>
+              <descriptionHyperlinks>
+                <ThingDef>MOW_Mech_Demolisher</ThingDef>
+              </descriptionHyperlinks>
+            </RecipeDef>
+          </value>
+        </li>
+			</operations>
+		</match>
   </Operation>
 </Patch>

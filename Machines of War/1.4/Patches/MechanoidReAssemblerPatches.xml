@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<!--[KIR]Extra Mechanoid Units and Equipment-->
 	<Operation Class="PatchOperationFindMod">

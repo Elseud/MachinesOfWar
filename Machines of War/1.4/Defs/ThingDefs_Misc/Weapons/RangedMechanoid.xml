@@ -19,15 +19,14 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef Abstract="True" ParentName="BaseGunWithQuality" Name="MOW_Gun_ParticleLauncherBase">
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>MOW_Gun_ParticleLauncher</defName>
     <label>particle launcher</label>
     <description>An explosive mini-artillery device. Fires a warhead containing unstable particles that detonate upon impact.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ParticleLauncher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>1.2</drawSize>
-	  <drawOffsetSouth MayRequire="CarnySenpai.EnableOversizedWeapons">(-0.4, 0.0, -0.4)</drawOffsetSouth>
-	  <drawOffsetWest MayRequire="CarnySenpai.EnableOversizedWeapons">(-0.3, 0.0, -0.3)</drawOffsetWest>
     </graphicData>
     <statBases>
       <MarketValue>1800</MarketValue>
@@ -51,10 +50,6 @@
       </li>
     </tools>
     <relicChance>0</relicChance>
-  </ThingDef>
-
-  <ThingDef ParentName="MOW_Gun_ParticleLauncherBase">
-    <defName>MOW_Gun_ParticleLauncher</defName>
     <destroyOnDrop>true</destroyOnDrop>
     <weaponTags>
       <li>MOW_MechanoidGunExplosive</li>
@@ -86,7 +81,7 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <projectile>
-      <damageDef>MOW_Breach_Ranged</damageDef>
+      <damageDef>Bullet</damageDef>
       <damageAmountBase>18</damageAmountBase>
 	  <armorPenetrationBase>0.45</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
@@ -97,7 +92,7 @@
   <ThingDef ParentName="BaseGunWithQuality">
     <defName>MOW_Gun_StormChargeScatter</defName>
     <label>storm charge scatter</label>
-    <description>A short-range weapon used by mechanoids. Equipped with axe head bayonet, it can serve in equal measure as a melee weapon, breaching tool and devastating chain shotgun.</description>
+    <description>A short-range weapon used by mechanoids. Equipped with axe head bayonet, it can serve in equal measure as a melee weapon and devastating chain shotgun.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/StormChargeScatter</texPath>
@@ -127,7 +122,6 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>MOW_Bullet_StormChargeScatter</defaultProjectile>
-		<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
         <warmupTime>1.2</warmupTime>
         <range>11.9</range>
 		<burstShotCount>3</burstShotCount>
@@ -191,7 +185,6 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ShockaveCannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize MayRequire="CarnySenpai.EnableOversizedWeapons">1.1</drawSize>
     </graphicData>
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
@@ -216,8 +209,7 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>MOW_Bullet_ShockaveCannon</defaultProjectile>
-		<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-        <warmupTime>1</warmupTime>
+        <warmupTime>1.6</warmupTime>
         <range>25.9</range>
 		<burstShotCount>1</burstShotCount>
         <soundCast>MOW_Shot_ShockwaveCannon</soundCast>
