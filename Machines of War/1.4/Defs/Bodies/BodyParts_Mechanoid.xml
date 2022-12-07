@@ -2,17 +2,17 @@
 <Defs>
 
   <BodyPartDef>
-		<defName>MOW_MechanicalShoulderPauldron</defName>
-		<label>shoulder pauldron</label>
-		<hitPoints>30</hitPoints>
-		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-		<skinCovered>false</skinCovered>
-		<solid>true</solid>
-		<alive>false</alive>
-		<bleedRate>0</bleedRate>
-		<tags>
-			<li>ManipulationLimbSegment</li>
-		</tags>
+	<defName>MOW_MechanicalShoulderPauldron</defName>
+	<label>shoulder pauldron</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ManipulationLimbSegment</li>
+	</tags>
   </BodyPartDef>
   
 </Defs>

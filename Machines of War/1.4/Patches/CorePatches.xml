@@ -59,6 +59,7 @@
 		  <Mech_CentipedeGunner>3</Mech_CentipedeGunner>
 		  <Mech_CentipedeBurner>3</Mech_CentipedeBurner>
           <MOW_Mech_Demolisher>10</MOW_Mech_Demolisher>
+		  <MOW_Mech_Bombardier>5</MOW_Mech_Bombardier>
         </options>
       </li>
       <li>
@@ -68,6 +69,7 @@
         <options>
           <MOW_Mech_Enforcer>20</MOW_Mech_Enforcer>
           <MOW_Mech_Demolisher>10</MOW_Mech_Demolisher>
+		  <MOW_Mech_Bombardier>5</MOW_Mech_Bombardier>
         </options>
       </li>	  
       <li>
@@ -78,6 +80,7 @@
           <MOW_Mech_Enforcer>20</MOW_Mech_Enforcer>
 		  <MOW_Mech_Cicada>10</MOW_Mech_Cicada>
           <MOW_Mech_Demolisher>5</MOW_Mech_Demolisher>
+		  <MOW_Mech_Bombardier>2</MOW_Mech_Bombardier>
         </options>
       </li>	
 	  <li>
@@ -89,6 +92,7 @@
           <MOW_Mech_Demolisher>10</MOW_Mech_Demolisher>
           <MOW_Mech_Cicada>10</MOW_Mech_Cicada>
           <MOW_Mech_Enforcer>10</MOW_Mech_Enforcer>
+		  <MOW_Mech_Bombardier>5</MOW_Mech_Bombardier>
         </options>
       </li>	  
     </value>
