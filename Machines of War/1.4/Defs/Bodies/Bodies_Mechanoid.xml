@@ -673,11 +673,11 @@
           </parts>
         </li>
 		<li>
-          <def>BulbTurret</def>
-          <customLabel>bulb turret</customLabel>
+          <def>MOW_TurretNest</def>
+          <customLabel>turret nest</customLabel>
           <coverage>0.08</coverage>
           <groups>
-            <li>BulbTurret</li>
+            <li>MOW_TurretNest</li>
           </groups>
         </li>
         <li>

@@ -334,7 +334,7 @@
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
 		<requireLineOfSight>false</requireLineOfSight>
-        <linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>MOW_TurretNest</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 		<ticksBetweenBurstShots>600</ticksBetweenBurstShots>
 		<targetParams>
