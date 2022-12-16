@@ -310,7 +310,7 @@
   <ThingDef ParentName="BaseArtilleryWeapon">
     <defName>MOW_Artillery_ChargeHowitzer</defName>
     <label>charge howitzer</label>
-    <description>A relatively short-range artillery piece typically mounted on Bombardier mechanoids. Internal fabricator, autoloader and targetting AI allow it to lob charge shells completely independently to its carrier. Its magnetic acceleration rails make fired projectiles somewhat faster and more accurate than those shot out of regular mortars.</description>
+    <description>A relatively short-range artillery piece typically found mounted on Bombardier mechanoids. Internal fabricator, autoloader and targetting AI allow it to lob charge shells completely independently to its carrier. Its magnetic acceleration rails make fired projectiles somewhat faster and more accurate than those shot out of regular mortars.</description>
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
     <graphicData>
