@@ -299,7 +299,7 @@
       <speed>50</speed>
       <damageDef>Bomb</damageDef>
 	  <flyOverhead>true</flyOverhead>
-	  <damageAmountBase>40</damageAmountBase>
+	  <damageAmountBase>30</damageAmountBase>
       <explosionRadius>2.9</explosionRadius>
       <ai_IsIncendiary>true</ai_IsIncendiary>
 	  <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
