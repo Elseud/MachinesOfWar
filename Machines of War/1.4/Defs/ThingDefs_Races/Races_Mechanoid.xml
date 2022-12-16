@@ -291,7 +291,7 @@
   <ThingDef ParentName="BaseMechanoidWalker">
     <defName>MOW_Mech_Bombardier</defName>
     <label>bombardier</label>
-    <description>Large, quadrapedal mechanoids specialised as a mobile artillery platform. Boasting a fearsome array of long-range weaponry, Bombardiers are equally formidable during an open field battle as they are besieging fortifications - their needlers laying down supressive fire, while the howitzer mounted on their backs rains death from above. However, for all their ranged firepower, they are very vulnurable up close - the relatively thin armor and cumbersome nature of their giant bodies making them ripe targets for short range bruisers.</description>
+    <description>Large, quadrapedal mechanoids specialised as a mobile artillery platform. Boasting a fearsome array of long-range weaponry, Bombardiers are as formidable during an open field battle as they are besieging fortifications - their needlers laying down supressive fire, while the howitzer mounted on their backs rains death from above. However, for all their ranged firepower, they are very vulnurable up close - the relatively thin armor and cumbersome nature of their giant bodies making them ripe targets for short range bruisers.</description>
     <statBases>
       <MoveSpeed>1.7</MoveSpeed>
       <ArmorRating_Blunt>0.21</ArmorRating_Blunt>

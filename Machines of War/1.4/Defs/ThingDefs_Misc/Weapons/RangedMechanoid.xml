@@ -239,6 +239,7 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Needler</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
     </graphicData>
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
@@ -296,7 +297,7 @@
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
-      <speed>50</speed>
+      <speed>40</speed>
       <damageDef>Bomb</damageDef>
 	  <flyOverhead>true</flyOverhead>
 	  <damageAmountBase>30</damageAmountBase>
