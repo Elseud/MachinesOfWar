@@ -292,6 +292,7 @@
     <graphicData>
       <texPath>Things/Projectile/Shell_ChargeHowitzer</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>2</drawSize>
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
@@ -323,9 +324,9 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <defaultProjectile>MOW_Bullet_Shell_ChargeHowitzer</defaultProjectile>
-        <minRange>5.9</minRange>
-        <range>59.9</range>
-		<forcedMissRadius>6</forcedMissRadius>
+        <minRange>7.9</minRange>
+        <range>49.9</range>
+		<forcedMissRadius>7</forcedMissRadius>
         <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
 		<defaultCooldownTime>4</defaultCooldownTime>
         <soundCast>Shot_ChargeBlaster</soundCast>
