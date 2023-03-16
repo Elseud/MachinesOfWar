@@ -37,23 +37,6 @@
   </SoundDef>
   
   <SoundDef>
-    <defName>MOW_Shot_ChargeHowitzer</defName>  
-    <context>MapOnly</context>  
-	<maxSimultaneous>1</maxSimultaneous>  
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Clip">
-            <clipPath>Things/MOW_Shot_ChargeHowitzer</clipPath>
-          </li>
-        </grains>      
-        <volumeRange>25~30</volumeRange>
-		<pitchRange>0.7~0.9</pitchRange>
-      </li>
-    </subSounds>
-  </SoundDef>
-  
-  <SoundDef>
     <defName>MOW_Shot_EMMarksmanRifle</defName>  
     <context>MapOnly</context>  
 	<maxSimultaneous>1</maxSimultaneous>  
