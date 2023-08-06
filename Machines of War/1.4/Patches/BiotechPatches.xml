@@ -13,15 +13,15 @@
         <!-- Enforcer -->
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Enforcer"]/statBases</xpath>
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Enforcer"]/statBases</xpath>
 					<value>
-            <BandwidthCost>2</BandwidthCost>
+            <BandwidthCost>3</BandwidthCost>
             <MechEnergyLossPerHP>0.2</MechEnergyLossPerHP>
 					</value>
 				</li>
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Enforcer"]/lifeStages</xpath>
+					<xpath>Defs/PawnKindDef[defName = "MOW_Mech_Enforcer"]/lifeStages</xpath>
           <order>Prepend</order>
 					<value>
             <li>
@@ -40,7 +40,7 @@
 				</li>
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Enforcer"]/race/lifeStageAges</xpath>
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Enforcer"]/race/lifeStageAges</xpath>
 					<value>
             <li>
               <def>MechanoidFullyFormed</def>
@@ -53,7 +53,56 @@
 				</li>
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Enforcer"]</xpath>
+					<xpath>Defs/PawnKindDef[defName = "MOW_Mech_Enforcer"]</xpath>
+					<value>
+            <techHediffsChance>1</techHediffsChance>
+					</value>
+				</li>
+
+        <!-- Breacher -->
+
+        <li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Enforcer_Breacher"]/statBases</xpath>
+					<value>
+            <BandwidthCost>3</BandwidthCost>
+            <MechEnergyLossPerHP>0.2</MechEnergyLossPerHP>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "MOW_Mech_Enforcer_Breacher"]/lifeStages</xpath>
+          <order>Prepend</order>
+					<value>
+            <li>
+              <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/EnforcerBreachClean/EnforcerBreachClean</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_EnforcerBreach</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.7</drawSize>
+                <shadowData>
+                  <volume>(0.4, 0.8, 0.4)</volume>
+                </shadowData>
+              </bodyGraphicData>
+            </li>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Enforcer_Breacher"]/race/lifeStageAges</xpath>
+					<value>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+              <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+              <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+            </li>
+					</value>
+				</li>
+
+        <li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "MOW_Mech_Enforcer_Breacher"]</xpath>
 					<value>
             <techHediffsChance>1</techHediffsChance>
 					</value>
@@ -62,7 +111,7 @@
         <!-- Cicada -->
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Cicada"]/statBases</xpath>
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Cicada"]/statBases</xpath>
 					<value>
             <BandwidthCost>3</BandwidthCost>
             <MechEnergyLossPerHP>0.2</MechEnergyLossPerHP>
@@ -70,7 +119,7 @@
 				</li>
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Cicada"]/race/lifeStageAges</xpath>
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Cicada"]/race/lifeStageAges</xpath>
 					<value>
             <li>
               <def>MechanoidFullyFormed</def>
@@ -111,7 +160,7 @@
         <!-- Demolisher -->
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Demolisher"]/statBases</xpath>
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Demolisher"]/statBases</xpath>
 					<value>
             <BandwidthCost>5</BandwidthCost>
             <MechEnergyLossPerHP>0.15</MechEnergyLossPerHP>
@@ -119,7 +168,7 @@
 				</li>
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Demolisher"]/race/lifeStageAges</xpath>
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Demolisher"]/race/lifeStageAges</xpath>
 					<value>
             <li>
               <def>MechanoidFullyFormed</def>
@@ -132,7 +181,7 @@
 				</li>
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Demolisher"]/lifeStages</xpath>
+					<xpath>Defs/PawnKindDef[defName = "MOW_Mech_Demolisher"]/lifeStages</xpath>
           <order>Prepend</order>
 					<value>
             <li>
@@ -151,7 +200,7 @@
 				</li>
 
         <li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName = "MOW_Mech_Demolisher"]</xpath>
+					<xpath>Defs/PawnKindDef[defName = "MOW_Mech_Demolisher"]</xpath>
 					<value>
             <techHediffsChance>1</techHediffsChance>
 					</value>
@@ -196,7 +245,7 @@
         </li>
 
         <li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName = "MOW_Mech_Cicada"]/race/thinkTreeConstant</xpath>
+					<xpath>Defs/ThingDef[defName = "MOW_Mech_Cicada"]/race/thinkTreeConstant</xpath>
 					<value>
             <thinkTreeConstant>MechConstant</thinkTreeConstant>
 					</value>
@@ -208,6 +257,7 @@
           <xpath>Defs/RecipeDef[defName = "ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
             <value>
                   <li>Corpse_MOW_Mech_Enforcer</li>
+                  <li>Corpse_MOW_Mech_Enforcer_Breacher</li>
                   <li>Corpse_MOW_Mech_Cicada</li>
             </value>
         </li>
@@ -223,6 +273,7 @@
           <xpath>Defs/ThingDef[defName = "LargeMechGestator"]/recipes</xpath>
             <value>
                 <li>Enforcer</li>
+                <li>EnforcerBreacher</li>
                 <li>Cicada</li>
                 <li>Demolisher</li>
             </value>
@@ -233,8 +284,8 @@
           <value>
             <RecipeDef ParentName="MediumMechanoidRecipe">
               <defName>Enforcer</defName>
-              <label>gestate enforcer</label>
-              <description>Gestate an enforcer mechanoid.</description>
+              <label>gestate enforcer assaulter</label>
+              <description>Gestate an enforcer assaulter mechanoid.</description>
             <gestationCycles>3</gestationCycles>
             <researchPrerequisite>HighMechtech</researchPrerequisite>
               <ingredients Inherit="False">
@@ -276,6 +327,54 @@
               </products>
               <descriptionHyperlinks>
                 <ThingDef>MOW_Mech_Enforcer</ThingDef>
+              </descriptionHyperlinks>
+            </RecipeDef>
+            
+            <RecipeDef ParentName="MediumMechanoidRecipe">
+              <defName>EnforcerBreacher</defName>
+              <label>gestate enforcer breacher</label>
+              <description>Gestate an enforcer breacher mechanoid.</description>
+            <gestationCycles>3</gestationCycles>
+            <researchPrerequisite>HighMechtech</researchPrerequisite>
+              <ingredients Inherit="False">
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>150</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Plasteel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>150</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>ComponentIndustrial</li>
+                    </thingDefs>
+                  </filter>
+                  <count>6</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SubcoreRegular</li>
+                    </thingDefs>
+                  </filter>
+                  <count>1</count>
+                </li>
+              </ingredients>
+              <products>
+                <MOW_Mech_Enforcer_Breacher>1</MOW_Mech_Enforcer_Breacher>
+              </products>
+              <descriptionHyperlinks>
+                <ThingDef>MOW_Mech_Enforcer_Breacher</ThingDef>
               </descriptionHyperlinks>
             </RecipeDef>
             

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Better Mechanoid Loot (continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="MOW_Mech_Demolisher"]/butcherProducts</xpath>
+					<value>
+						<butcherProducts>			
+							<Steel>60</Steel>				  
+							<Plasteel>25</Plasteel>
+							<Gold>15</Gold>
+							<ComponentIndustrial>1</ComponentIndustrial>
+					  </butcherProducts>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="MOW_Mech_Enforcer"]/butcherProducts</xpath>
+					<value>
+						<butcherProducts>			
+							<Steel>30</Steel>				  
+							<Plasteel>15</Plasteel>
+							<Gold>5</Gold>
+					  </butcherProducts>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="MOW_Mech_Enforcer_Breacher"]/butcherProducts</xpath>
+					<value>
+						<butcherProducts>			
+							<Steel>30</Steel>				  
+							<Plasteel>15</Plasteel>
+							<Gold>5</Gold>
+					  </butcherProducts>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="MOW_Mech_Cicada"]/butcherProducts</xpath>
+					<value>
+						<butcherProducts>			
+							<Steel>25</Steel>				  
+							<Plasteel>15</Plasteel>
+							<Gold>5</Gold>
+					  </butcherProducts>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
