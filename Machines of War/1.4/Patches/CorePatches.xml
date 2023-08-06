@@ -2,44 +2,52 @@
 <Patch>
 
   <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
+    <xpath>Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
     <value>
       <li>
         <!-- Infantry + Cicada support -->
         <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
+        <commonality>30</commonality>
         <options>
           <Mech_Pikeman>10</Mech_Pikeman>
           <Mech_Lancer>10</Mech_Lancer>
           <Mech_Scyther>10</Mech_Scyther>
 		  <MOW_Mech_Cicada>10</MOW_Mech_Cicada>
+		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">15</Mech_Militor>
+		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Tesseron>
+		  <Mech_Scorcher MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Scorcher>
+		  <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Legionary>
         </options>
       </li>
       <li>
         <!-- Heavy Infantry -->
         <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
+        <commonality>40</commonality>
         <options>
           <MOW_Mech_Enforcer>10</MOW_Mech_Enforcer>
           <Mech_Lancer>10</Mech_Lancer>
 		  <Mech_Pikeman>10</Mech_Pikeman>
+		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Tesseron>
+		  <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Legionary>
         </options>
       </li>
       <li>
         <!-- Heavy Infantry + Cicada Support -->
         <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
+        <commonality>20</commonality>
         <options>
           <MOW_Mech_Enforcer>10</MOW_Mech_Enforcer>
           <Mech_Lancer>10</Mech_Lancer>
 		  <Mech_Pikeman>10</Mech_Pikeman>
 		  <MOW_Mech_Cicada>10</MOW_Mech_Cicada>
+		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Tesseron>
+		  <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Legionary>
         </options>
       </li>
 	  <li>
         <!-- Assault -->
         <kindDef>Combat</kindDef>
-        <commonality>140</commonality>
+        <commonality>20</commonality>
         <options>
 		  <Mech_Scyther>10</Mech_Scyther>
 		  <MOW_Mech_Cicada>20</MOW_Mech_Cicada>
@@ -48,32 +56,13 @@
 		  <Mech_CentipedeGunner>30</Mech_CentipedeGunner>
 		  <Mech_CentipedeBurner>30</Mech_CentipedeBurner>
           <MOW_Mech_Demolisher>70</MOW_Mech_Demolisher>
+		  <Mech_Centurion MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Centurion>
         </options>
       </li>
-      <li>
-        <!-- Heavy Fire -->
-        <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
-        <options>
-          <Mech_CentipedeBlaster>3</Mech_CentipedeBlaster>
-		  <Mech_CentipedeGunner>3</Mech_CentipedeGunner>
-		  <Mech_CentipedeBurner>3</Mech_CentipedeBurner>
-          <MOW_Mech_Demolisher>10</MOW_Mech_Demolisher>
-        </options>
-      </li>
-      <li>
-        <!-- Demolition Team -->
-        <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
-        <options>
-          <MOW_Mech_Enforcer>20</MOW_Mech_Enforcer>
-          <MOW_Mech_Demolisher>10</MOW_Mech_Demolisher>
-        </options>
-      </li>	  
       <li>
         <!-- All Stars -->
         <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
+        <commonality>20</commonality>
         <options>
           <MOW_Mech_Enforcer>20</MOW_Mech_Enforcer>
 		  <MOW_Mech_Cicada>10</MOW_Mech_Cicada>
@@ -89,6 +78,7 @@
           <MOW_Mech_Demolisher>10</MOW_Mech_Demolisher>
           <MOW_Mech_Cicada>10</MOW_Mech_Cicada>
           <MOW_Mech_Enforcer>10</MOW_Mech_Enforcer>
+          <MOW_Mech_Enforcer_Breacher>5</MOW_Mech_Enforcer_Breacher>
         </options>
       </li>	  
     </value>

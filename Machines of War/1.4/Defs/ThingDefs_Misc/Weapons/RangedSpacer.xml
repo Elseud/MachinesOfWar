@@ -9,14 +9,15 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>15</damageAmountBase>
-	  <armorPenetrationBase>0.60</armorPenetrationBase>
-      <stoppingPower>1.5</stoppingPower>
+      <damageAmountBase>13</damageAmountBase>
+	  <armorPenetrationBase>0.50</armorPenetrationBase>
+      <stoppingPower>1.2</stoppingPower>
       <speed>120</speed>
 	  <extraDamages>
 	    <li>
           <def>EMP</def>
-          <amount>8</amount>
+          <amount>6</amount>
+          <chance>0.4</chance>
         </li>
 	  </extraDamages>
     </projectile>
@@ -25,7 +26,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MOW_Gun_EMMarksmanRifle</defName>
     <label>EM marksman rifle</label>
-    <description>A marksman rifle relying on a set of electromagnetic rails for projectile acceleration. electromagnetic weaponry exchanges raw damage for armour penetration and reliability, on top of supercharging its shots with an electromagnetic payload.</description>
+    <description>A marksman rifle relying on a set of electromagnetic rails for projectile acceleration. Electromagnetic weaponry exchanges raw damage for armour penetration and reliability, on top of supercharging its shots with an ionized payload that can temporarily disable most electrical systems.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/EMMarksmanRifle</texPath>
@@ -41,12 +42,12 @@
       <AccuracyShort>0.85</AccuracyShort>
       <AccuracyMedium>0.85</AccuracyMedium>
       <AccuracyLong>0.85</AccuracyLong>
-      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>ChargedShot</researchPrerequisite>
       <skillRequirements>
-        <Crafting>10</Crafting>
+        <Crafting>12</Crafting>
       </skillRequirements>
       <recipeUsers Inherit="False">
         <li>FabricationBench</li>

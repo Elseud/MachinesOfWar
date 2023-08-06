@@ -3,7 +3,7 @@
 
   <ThingDef ParentName="BaseMechanoidWalker">
     <defName>MOW_Mech_Enforcer</defName>
-    <label>enforcer</label>
+    <label>enforcer assaulter</label>
     <description>Tough, human-sized combat mechanoids built for short range to melee combat. Designed predominantly for urban warfare, they are well equipped for storming structures and slaughtering everyone inside. This narrow specialization has its drawbacks however - their mediocre speed and short range weaponry making enforcers ill-suited for open field deployment.</description>
     <statBases>
       <MoveSpeed>3.80</MoveSpeed>
@@ -62,15 +62,14 @@
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>15</Steel>
-      <Plasteel>15</Plasteel>
-      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>20</Steel>
+      <Plasteel>5</Plasteel>
     </butcherProducts>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseMechanoidKind">
     <defName>MOW_Mech_Enforcer</defName>
-    <label>enforcer</label>
+    <label>enforcer assaulter</label>
     <race>MOW_Mech_Enforcer</race>
     <combatPower>200</combatPower>
     <lifeStages>
@@ -78,6 +77,40 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Enforcer/Enforcer</texPath>
 		  <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Enforcer</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.7</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+	<isGoodBreacher>false</isGoodBreacher>
+	<techHediffsMoney>9999~9999</techHediffsMoney>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>MOW_MechanoidGunAssault</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <!-- Breacher -->
+
+  <ThingDef ParentName="MOW_Mech_Enforcer">
+    <defName Inherit="False">MOW_Mech_Enforcer_Breacher</defName>
+    <label Inherit="False">enforcer breacher</label>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>MOW_Mech_Enforcer_Breacher</defName>
+    <label>enforcer breacher</label>
+    <race>MOW_Mech_Enforcer_Breacher</race>
+    <combatPower>180</combatPower>
+    <lifeStages>
+	    <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/EnforcerBreach/EnforcerBreach</texPath>
+		  <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_EnforcerBreach</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.7</drawSize>
@@ -157,9 +190,8 @@
       <thinkTreeConstant>CicadaConstant</thinkTreeConstant>
     </race>
 	<butcherProducts>
-		<Steel>10</Steel>
+		<Steel>15</Steel>
 		<Plasteel>10</Plasteel>
-		<ComponentIndustrial>3</ComponentIndustrial>
 	</butcherProducts>
   </ThingDef>
   
@@ -200,7 +232,7 @@
 			<MoveSpeed>2.1</MoveSpeed>
 			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-			<PsychicSensitivity>0.5</PsychicSensitivity>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>
 		<tools>
 			<li>
@@ -254,11 +286,11 @@
 			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+      <mechWeightClass>Heavy</mechWeightClass>
 		</race>
 		<butcherProducts>
-			<Steel>20</Steel>
-			<Plasteel>20</Plasteel>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<Steel>40</Steel>
+			<Plasteel>15</Plasteel>
 		</butcherProducts>
 	</ThingDef>
 
@@ -266,7 +298,8 @@
 		<defName>MOW_Mech_Demolisher</defName>
 		<label>demolisher</label>
 		<race>MOW_Mech_Demolisher</race>
-		<combatPower>410</combatPower>
+		<combatPower>420</combatPower>
+    <maxPerGroup>6</maxPerGroup>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
