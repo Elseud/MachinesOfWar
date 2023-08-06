@@ -7,7 +7,7 @@
       <li>
         <!-- Infantry + Cicada support -->
         <kindDef>Combat</kindDef>
-        <commonality>70</commonality>
+        <commonality>50</commonality>
         <options>
           <Mech_Pikeman>10</Mech_Pikeman>
           <Mech_Lancer>10</Mech_Lancer>
@@ -22,7 +22,7 @@
       <li>
         <!-- Heavy Infantry -->
         <kindDef>Combat</kindDef>
-        <commonality>80</commonality>
+        <commonality>60</commonality>
         <options>
           <MOW_Mech_Enforcer>10</MOW_Mech_Enforcer>
           <Mech_Lancer>10</Mech_Lancer>
@@ -34,7 +34,7 @@
       <li>
         <!-- Heavy Infantry + Cicada Support -->
         <kindDef>Combat</kindDef>
-        <commonality>60</commonality>
+        <commonality>50</commonality>
         <options>
           <MOW_Mech_Enforcer>10</MOW_Mech_Enforcer>
           <Mech_Lancer>10</Mech_Lancer>
@@ -47,7 +47,7 @@
 	  <li>
         <!-- Assault -->
         <kindDef>Combat</kindDef>
-        <commonality>60</commonality>
+        <commonality>40</commonality>
         <options>
 		  <Mech_Scyther>10</Mech_Scyther>
 		  <MOW_Mech_Cicada>20</MOW_Mech_Cicada>
@@ -62,7 +62,7 @@
       <li>
         <!-- All Stars -->
         <kindDef>Combat</kindDef>
-        <commonality>60</commonality>
+        <commonality>30</commonality>
         <options>
           <MOW_Mech_Enforcer>20</MOW_Mech_Enforcer>
 		  <MOW_Mech_Cicada>10</MOW_Mech_Cicada>
