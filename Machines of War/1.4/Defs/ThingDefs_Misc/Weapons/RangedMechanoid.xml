@@ -164,7 +164,7 @@
     </graphicData>
     <projectile>
       <damageDef>MOW_Breach_Ranged</damageDef>
-      <damageAmountBase>18</damageAmountBase>
+      <damageAmountBase>15</damageAmountBase>
 	  <armorPenetrationBase>0.45</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
       <speed>60</speed>
@@ -218,7 +218,7 @@
         <capacities>
           <li>MOW_Breach</li>
         </capacities>
-        <power>14</power>
+        <power>10</power>
         <cooldownTime>1.5</cooldownTime>
 		<armorPenetration>0.4</armorPenetration>
       </li>

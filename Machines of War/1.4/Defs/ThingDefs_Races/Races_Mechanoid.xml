@@ -166,7 +166,7 @@
     <defName>MOW_Mech_Enforcer_Breacher</defName>
     <label>enforcer breacher</label>
     <race>MOW_Mech_Enforcer_Breacher</race>
-    <combatPower>180</combatPower>
+    <combatPower>160</combatPower>
     <lifeStages>
 	    <li>
         <bodyGraphicData>
