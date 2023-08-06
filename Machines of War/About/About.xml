@@ -7,5 +7,12 @@
 	<li>1.4</li>
     </supportedVersions>
     <packageId>EL.MOW</packageId>
-    <description>Bolsters the mechanoid threat terrorizing the Rim with three new powerful additions.</description>
+    <description>Bolsters the mechanoid threat terrorizing the Rim with new powerful additions.</description>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>RelaxedOtter.BetterMechanoidLoot</li>
+		<li>CarnySenpai.EnableOversizedWeapons</li>
+	</loadAfter>
 </ModMetaData>
