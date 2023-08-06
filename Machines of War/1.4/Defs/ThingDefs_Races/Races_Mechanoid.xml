@@ -96,9 +96,70 @@
 
   <!-- Breacher -->
 
-  <ThingDef ParentName="MOW_Mech_Enforcer">
-    <defName Inherit="False">MOW_Mech_Enforcer_Breacher</defName>
-    <label Inherit="False">enforcer breacher</label>
+  <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>MOW_Mech_Enforcer_Breacher</defName>
+    <label>enforcer breacher</label>
+    <description>Tough, human-sized combat mechanoids built for short range to melee combat. Designed predominantly for urban warfare, they are well equipped for storming structures and slaughtering everyone inside. This narrow specialization has its drawbacks however - their mediocre speed and short range weaponry making enforcers ill-suited for open field deployment.</description>
+    <statBases>
+      <MoveSpeed>3.80</MoveSpeed>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+    </statBases>
+    <tools>
+        <li>
+          <label>left fist</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>12.0</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        </li>
+        <li>
+          <label>right fist</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>12.0</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        </li>
+        <li>
+          <label>head</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>8.5</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+          <chanceFactor>0.2</chanceFactor>
+        </li>
+    </tools>
+    <race>
+      <baseBodySize>1.1</baseBodySize>
+      <body>MOW_Enforcer</body>
+      <baseHealthScale>1.52</baseHealthScale>
+      <lifeStageAges Inherit="False">
+		<li>
+		  <def>MechanoidFullyFormed</def>
+		  <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+		</li>
+	  </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+    <butcherProducts>
+      <Steel>20</Steel>
+      <Plasteel>5</Plasteel>
+    </butcherProducts>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseMechanoidKind">
