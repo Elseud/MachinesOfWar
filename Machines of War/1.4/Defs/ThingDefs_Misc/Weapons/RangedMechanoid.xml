@@ -97,7 +97,7 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/StormChargeScatter</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.1</drawSize>
+	  <drawSize>1.2</drawSize>
     </graphicData>
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
@@ -179,7 +179,7 @@
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/BreachChargeScatter</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.1</drawSize>
+	  <drawSize>1.3</drawSize>
     </graphicData>
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
