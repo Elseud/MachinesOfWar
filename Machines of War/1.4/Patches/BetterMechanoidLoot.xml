@@ -8,8 +8,10 @@
 		<match Class="PatchOperationSequence">
 			<success>Normal</success>
 			<operations>
+
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="MOW_Mech_Demolisher"]/butcherProducts</xpath>
+
+					<xpath>Defs/ThingDef[defName="MOW_Mech_Demolisher"]/butcherProducts</xpath>
 					<value>
 						<butcherProducts>			
 							<Steel>60</Steel>				  
@@ -21,7 +23,7 @@
 				</li>
 
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="MOW_Mech_Enforcer"]/butcherProducts</xpath>
+					<xpath>Defs/ThingDef[defName="MOW_Mech_Enforcer"]/butcherProducts</xpath>
 					<value>
 						<butcherProducts>			
 							<Steel>30</Steel>				  
@@ -32,7 +34,7 @@
 				</li>
 
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="MOW_Mech_Enforcer_Breacher"]/butcherProducts</xpath>
+					<xpath>Defs/ThingDef[defName="MOW_Mech_Enforcer_Breacher"]/butcherProducts</xpath>
 					<value>
 						<butcherProducts>			
 							<Steel>30</Steel>				  
@@ -43,7 +45,7 @@
 				</li>
 
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="MOW_Mech_Cicada"]/butcherProducts</xpath>
+					<xpath>Defs/ThingDef[defName="MOW_Mech_Cicada"]/butcherProducts</xpath>
 					<value>
 						<butcherProducts>			
 							<Steel>25</Steel>				  
