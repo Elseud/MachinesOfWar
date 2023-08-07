@@ -16,7 +16,7 @@
 	  <extraDamages>
 	    <li>
           <def>EMP</def>
-          <amount>8</amount>
+          <amount>6</amount>
           <chance>0.5</chance>
         </li>
 	  </extraDamages>
