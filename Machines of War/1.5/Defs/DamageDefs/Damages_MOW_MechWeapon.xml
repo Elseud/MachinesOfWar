@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef>
+    <defName>MOW_Shockwave</defName>
+    <label>shockwave</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>false</isExplosive>
+    <deathMessage>{0} has been shockwaved to death.</deathMessage>
+    <hediff>Crush</hediff>	
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+	<isRanged>true</isRanged>
+  </DamageDef>
+
+  <DamageDef>
+    <defName>MOW_Breach_Ranged</defName>
+    <label>breach</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>false</isExplosive>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <hediff>Gunshot</hediff>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>8</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>0.75</buildingDamageFactorPassable>
+	<isRanged>true</isRanged>
+  </DamageDef>
+
+  <DamageDef ParentName="CutBase">
+    <defName>MOW_Breach</defName>
+    <label>breach</label>
+    <buildingDamageFactor>10</buildingDamageFactor>
+    <buildingDamageFactorImpassable>0.7</buildingDamageFactorImpassable>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>MOW_Breach</defName>
+    <label>breach</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>MOW_Breach</defName>
+    <requiredCapacity>MOW_Breach</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>MOW_Breach</meleeDamageDef>
+      <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+  
+</Defs>

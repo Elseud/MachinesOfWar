@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>MOW_CicadaShriek_Warmup</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <solidTime>0.95</solidTime>
+      <growthRate>-0.5</growthRate>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MotePsychicWarmupNeuroquake</shaderType>
+      <texPath>Things/Mote/MoteHellfireCannon_HeatWaveDistortion</texPath>
+      <shaderParameters>
+        <_distortionIntensity>0.2</_distortionIntensity>
+        <_brightnessMultiplier>1.3</_brightnessMultiplier>
+        <_distortionTint>(0, 0, 0, 0)</_distortionTint>
+        <_pulseSpeed>-0.7</_pulseSpeed>
+      </shaderParameters>
+      <drawSize>5</drawSize>
+    </graphicData>
+  </ThingDef>
+  
+  <EffecterDef>
+    <defName>MOW_CicadaShriek_Warmup</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+        <spawnLocType>OnSource</spawnLocType>
+        <soundDef>MOW_CicadaShriek_Warmup</soundDef>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+        <moteDef>MOW_CicadaShriek_Warmup</moteDef>
+        <initialDelayTicks>20</initialDelayTicks>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+  
+  <FleckDef ParentName="FleckGlowDistortBackground">
+    <defName>MOW_CicadaShriek</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <fadeOutTime>0.15</fadeOutTime>
+    <solidTime>0.3</solidTime>
+    <growthRate>2</growthRate>
+    <graphicData>
+      <texPath>Things/Mote/Black</texPath>
+      <shaderParameters>
+        <_DistortionTex>/Things/Mote/PsychicDistortionRing</_DistortionTex>
+        <_distortionIntensity>0.1</_distortionIntensity>
+        <_brightnessMultiplier>1.5</_brightnessMultiplier>
+      </shaderParameters>
+      <drawSize>3</drawSize>
+    </graphicData>
+  </FleckDef>
+  
+  <AbilityDef>
+    <defName>MOW_CicadaShriek</defName>
+    <label>cicada shriek</label>
+    <description>Emit a wide-band "white noise" from cicada's built-in sonic amplifier, temporarily crippling organic targets on top of occasionally inducing confusion.</description>
+    <iconPath>UI/Abilities/CicadaShriek</iconPath>
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <targetRequired>true</targetRequired>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>false</showCastingProgressBar>
+	<statBases>
+      <Ability_Duration>3</Ability_Duration>
+      <Ability_EffectRadius>2.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <label>cicada shriek</label>
+	  <soundCast>MOW_CicadaShriek</soundCast>
+	  <warmupEffecter>MOW_CicadaShriek_Warmup</warmupEffecter>
+      <warmupTime>1.5</warmupTime>
+      <range>15.9</range>
+      <drawAimPie>true</drawAimPie>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>MOW_ShriekEsposure</hediffDef>
+		<onlyBrain>True</onlyBrain>
+		<replaceExisting>true</replaceExisting>
+        <applicableToMechs>False</applicableToMechs>
+        <goodwillImpact>-20</goodwillImpact>
+      </li>
+	  <li Class = "CompProperties_AbilityEffectWithDuration">
+        <compClass>CompAbilityEffect_Stun</compClass>
+      </li>
+	  <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>MOW_CicadaShriek</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

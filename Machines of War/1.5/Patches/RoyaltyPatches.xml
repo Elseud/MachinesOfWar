@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+        <match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[building/minMechClusterPoints]/comps/li[spawnablePawnKinds]/spawnablePawnKinds</xpath>
+                    <value>
+                        <li>MOW_Mech_Enforcer</li>
+                        <li>MOW_Mech_Cicada</li>
+                        <li>MOW_Mech_Demolisher</li>
+                    </value>
+                </li>
+			</operations>
+	    </match>
+    </Operation>
+</Patch>
