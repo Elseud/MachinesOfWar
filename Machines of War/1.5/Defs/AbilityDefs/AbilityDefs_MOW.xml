@@ -65,10 +65,10 @@
     <label>cicada shriek</label>
     <description>Emit a wide-band "white noise" from cicada's built-in sonic amplifier, temporarily crippling organic targets on top of occasionally inducing confusion.</description>
     <iconPath>UI/Abilities/CicadaShriek</iconPath>
-    <cooldownTicksRange>3600</cooldownTicksRange>
+    <cooldownTicksRange>10000</cooldownTicksRange>
     <targetRequired>true</targetRequired>
     <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
     <showCastingProgressBar>false</showCastingProgressBar>
 	<statBases>
       <Ability_Duration>3</Ability_Duration>

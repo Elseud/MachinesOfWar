@@ -291,7 +291,7 @@
 		<description>Towering, roughly human-shaped combat mechanoids clad in heavy armour. they specialise as bunker busters - capable of laying waste to even the most fortified defense positions, along with any unfortunate soul manning them. the devastating weaponry, along with thick armour plating make demolishers a nightmare to deal with for any defender. their only disatdvantage is their relative slowness - making them vulnurable to hit and run attacks utilising long range anti-materiel weaponry, or heavy ordinance strikes.</description>
 		<statBases>
 			<MoveSpeed>2.1</MoveSpeed>
-			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.28</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
 			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>

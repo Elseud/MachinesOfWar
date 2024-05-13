@@ -215,7 +215,8 @@
             <li Class="ThinkNode_ConditionalPlayerMech">
               <invert>true</invert>
               <subNodes>
-    
+                <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+                <subNodes>
                 <li Class="ThinkNode_ConditionalHasAbility">
                   <ability>MOW_CicadaShriek</ability>
                   <subNodes>
@@ -237,6 +238,8 @@
     
                   </subNodes>
                 </li>
+              </subNodes>
+            </li>
     
               </subNodes>
             </li>
